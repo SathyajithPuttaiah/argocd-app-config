@@ -1,4 +1,5 @@
 apiVersion: argoproj.io/v1alpha1
+#apiVersion: argoproj.io/v1beta1
 kind: Application
 metadata:
   name: myapp-argo-application
@@ -12,7 +13,9 @@ spec:
     targetRevision: HEAD
     path: dev
   destination: 
-    server: https://kubernetes.default.svc
+    #server: https://kubernetes.default.svc
+    #server: https://arn:aws:eks:ap-south-1:225992052696:cluster/child1
+    server: https://3895F26E304C4CE527BCA3E40EEDC52F.gr7.ap-south-1.eks.amazonaws.com
     namespace: myapp
 
   syncPolicy:

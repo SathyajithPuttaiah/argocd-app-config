@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+#apiVersion: argoproj.io/v1beta1
+kind: Cluster
+metadata:
+  name: child1
+  namespace: myargo
+spec:
+  server: https://3895F26E304C4CE527BCA3E40EEDC52F.gr7.ap-south-1.eks.amazonaws.com
+  config:
+    name: arn:aws:eks:ap-south-1:225992052696:cluster/child1
+    sources:
+      - arn:aws:eks:ap-south-1:225992052696:cluster/child1
